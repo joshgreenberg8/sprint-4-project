@@ -78,6 +78,11 @@ games_df['opening'] = games_df['opening_name'].apply(get_opening)
 games_df['skill_level'] = games_df['avg_rating'].apply(get_skill_level)
 games_df['time_control'] = games_df['increment_code'].apply(get_time_control)
 
+st.write('''
+    # Chess Game Data Explorer
+    ## Data Science Sprint 4 Project
+    ### Made by Josh Greenberg)
+
 st.header('Total turns played in a game vs. Average rating of the players')
 
 # generate a scatter plot of average player rating vs. total turns, colored by time control
