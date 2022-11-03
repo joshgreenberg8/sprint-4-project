@@ -82,6 +82,7 @@ st.write('''
     # Chess Game Data Explorer
     ## Data Science Sprint 4 Project
     ### Made by Josh Greenberg)
+    '''
 
 st.header('Total turns played in a game vs. Average rating of the players')
 
