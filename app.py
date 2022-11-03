@@ -99,7 +99,8 @@ if rated_only:
     filter_df = games_df[games_df['rated']]
 
 # generate a histogram of the rating difference on the filtered data
-fig = px.histogram(filter_df, x='rating_difference', nbins=250, range_x=[-500,500])
+fig = px.histogram(filter_df, x='rating_difference', nbins=250, range_x=[-500,500],
+    labels=dict(rating_difference='Rating difference (white - black)'), title='Rating Differential Between Players')
 
 # use streamlit to display fig
 st.write(fig)
