@@ -81,7 +81,7 @@ games_df['time_control'] = games_df['increment_code'].apply(get_time_control)
 st.write('''
     # Chess Game Data Explorer
     ## Data Science Sprint 4 Project
-    ### Made by Josh Greenberg)
+    ### Made by Josh Greenberg
     '''
     )
 
