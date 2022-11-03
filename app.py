@@ -9,7 +9,7 @@ import streamlit as st
 import plotly_express as px
 
 #load the data into a DataFrame using pandas
-games_df = pd.read_csv('../games.csv')
+games_df = pd.read_csv('./games.csv')
 games_df.info()
 
 # drop duplicates
@@ -140,7 +140,8 @@ q_string = 'opening in @opening and skill_level in @skill_level'
 filter_df = games_df.query(q_string)
 
 # generate the histogram of winner color, in a consistent order with plotly express
-fig = px.histogram(filter_df, x='winner', category_orders={'winner':['white','black','draw']})
+fig = px.histogram(filter_df, x='winner', category_orders={'winner':['white','black','draw']}, 
+        labels=dict(winner='Winner'), title='Winning Color')
 
 # display the figure with streamlit
 st.write(fig)
