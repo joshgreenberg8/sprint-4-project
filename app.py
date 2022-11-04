@@ -81,9 +81,14 @@ games_df['time_control'] = games_df['increment_code'].apply(get_time_control)
 st.write('''
     # Chess Game Data Explorer
     ## Data Science Sprint 4 Project
-    ### Made by Josh Greenberg)
+    ### Made by Josh Greenberg
     '''
     )
+
+
+st.header('A look at the games dataset')
+# display the dataframe
+st.write(games_df)
 
 st.header('Total turns played in a game vs. Average rating of the players')
 
@@ -109,6 +114,15 @@ if rated_only:
 fig = px.histogram(filter_df, x='rating_difference', nbins=250, range_x=[-500,500],
     labels=dict(rating_difference='Rating difference (white - black)'), title='Rating Differential Between Players')
 
+# use streamlit to display fig
+st.write(fig)
+
+st.header('Game End Conditions')
+
+# show histogram of game outcomes, colored by skill level
+fig = px.histogram(games_df, x='victory_status', color='skill_level', title='Game End Conditions',
+    labels=dict(victory_status='End Condition', skill_level='Skill Level'))
+    
 # use streamlit to display fig
 st.write(fig)
 
