@@ -18,7 +18,7 @@ We created some new columns relevant to our exploratory analysis. We attempted t
 
 * As player rating increases, fewer games are ended in the earlier rounds. 
 
-* As player rating increases beyond 2000, there is a noticeable taper that also reduces games with higher relative turn counts.
+* As player rating increases beyond 2000, there is a noticeable taper that also reduces games with higher relative turn counts. The mean looks to be around 50 turns.
 
 * As skill level increases, the ratio of resignations to checkmates also increases.
 
